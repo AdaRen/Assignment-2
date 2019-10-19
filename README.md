@@ -3,16 +3,16 @@ makeCacheMatrix <- function(x = matrix()) {
 t <- NULL
 set <- function(y) {
 x «- y 
-# Set value
+# Set value.
 t « NULL 
-# Clear cache
+# Clear cache.
 }
 get <- function() x
-# Define function that will set inverse
+# Define function that will set inverse.
 setInverse <- function(inverse) t «- inverse
-# Define function that will get inverse
+# Define function that will get inverse.
 getInverse <- function() t
-# Return functions
+# Return functions.
 list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 # Function computes the inverse of the special "matrix" which was returned by makeCacheMatrix. If inverse is calculated and isn't changed then cachesolve retrieves inverse from cache.
